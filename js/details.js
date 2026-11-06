@@ -73,7 +73,7 @@ Promise.all(jsonFiles.map(file => fetch(file).then(res => {
                         <a href="${app.download_url || '#'}" class="btn-apk-primary w-100 mb-2">
                             Download APK <i class="fa-solid fa-download"></i>
                         </a>
-                        <a href="${app.telegram_url || '#'}" class="btn-telegram w-100 mb-1">
+                        <a href="https://asiafilm.org/4/1f06ef4f16448d7397534363224d9253" class="btn-telegram w-100 mb-1">
                             Request APK on Telegram <i class="fa-paper-plane fa-solid text-info"></i>
                         </a>
                         <div class="text-center text-md-end">

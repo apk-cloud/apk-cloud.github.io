@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/fav-icon.svg">
+    <title>Apps - APKCloud</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome 6 Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/content-body.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-apk sticky-top">
+        <div class="container">
+            <a class="navbar-brand logo-apk d-flex align-items-center" href="/index.html">
+                <span class="logo-symbol"><i class="fa-solid fa-cloud-arrow-down"></i></span>APKCloud
+            </a>
+
+            <!-- Mobile Hamburger Toggle Button -->
+            <button class="navbar-toggler border-0 p-1 shadow-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenuDrawer" aria-controls="mobileMenuDrawer">
+                <i class="fa-solid fa-bars-staggered fs-4 text-dark"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNavbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-apk" href="/games.html">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-apk active" href="/apps.html">Apps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-apk" href="https://asiafilm.org/4/1f06ef4f16448d7397534363224d9253">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-apk" href="https://asiafilm.org/4/1f06ef4f16448d7397534363224d9253">Products</a>
+                    </li>
+                </ul>
+
+                <div class="search-box-wrap">
+                    <input type="text" class="searchInput form-control" placeholder="Search APKCloud...">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <div class="suggestions-dropdown d-none"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Top Search Bar (Visible only on small screens) -->
+    <div class="container d-lg-none mt-2 mb-3">
+        <div class="search-box-wrap">
+            <input type="text" class="searchInput form-control" placeholder="Search Apps, Games...">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <div class="suggestions-dropdown d-none"></div>
+        </div>
+    </div>
+
+    <!-- Smart Mobile Offcanvas Drawer -->
+    <div class="offcanvas offcanvas-start offcanvas-apk" tabindex="-1" id="mobileMenuDrawer"
+        aria-labelledby="mobileMenuDrawerLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand logo-apk d-flex align-items-center" href="/index.html">
+                <span class="logo-symbol"><i class="fa-solid fa-cloud-arrow-down"></i></span>APKCloud
+            </a>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between py-3">
+            <ul class="navbar-nav gap-1">
+                <li class="nav-item">
+                    <a class="mobile-nav-link" href="/index.html">
+                        <i class="fa-solid fa-house"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="mobile-nav-link" href="/games.html">
+                        <i class="fa-solid fa-gamepad"></i> Games
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="mobile-nav-link active" href="/apps.html">
+                        <i class="fa-solid fa-shapes"></i> Apps
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="mobile-nav-link" href="https://asiafilm.org/4/1f06ef4f16448d7397534363224d9253">
+                        <i class="fa-regular fa-newspaper"></i> Articles
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="mobile-nav-link" href="https://asiafilm.org/4/1f06ef4f16448d7397534363224d9253">
+                        <i class="fa-solid fa-cube"></i> Products
+                    </a>
+                </li>
+            </ul>
+
+            <div class="p-3 bg-light rounded-3 text-center mt-4">
+                <div class="fw-bold mb-1" style="font-size: 13px;">APKCloud App</div>
+                <p class="text-muted mb-2" style="font-size: 11px;">Fast & safe download experience</p>
+                <a href="#" class="btn btn-sm btn-success w-100 fw-semibold" style="background-color: #24c974; border: none;">Get App</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="container my-4">
+        
+        <section class="app-section mb-5">
+            <h2 class="section-heading mb-3">Latest Update Apps</h2>
+            <div class="row g-3" id="latest-apps-grid">
+                <!-- All Category 1 App Json Load -->
+            </div>
+        </section>
+
+        <section class="app-section mb-4">
+            <h2 class="section-heading mb-3">
+                <a href="/apps/category.html?category=art-and-design">
+                    Art & Design Apps
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M439.1 297.4C451.6 309.9 451.6 330.2 439.1 342.7L279.1 502.7C266.6 515.2 246.3 515.2 233.8 502.7C221.3 490.2 221.3 469.9 233.8 457.4L371.2 320L233.9 182.6C221.4 170.1 221.4 149.8 233.9 137.3C246.4 124.8 266.7 124.8 279.2 137.3L439.2 297.3z"/></svg>
+                </a>
+            </h2>
+            <div class="row g-3" id="apps-grid-art-and-design">
+                
+            </div>
+        </section>
+
+        <section class="app-section mb-4">
+            <h2 class="section-heading mb-3">
+                <a href="/apps/category.html?category=social">
+                    Social Apps
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M439.1 297.4C451.6 309.9 451.6 330.2 439.1 342.7L279.1 502.7C266.6 515.2 246.3 515.2 233.8 502.7C221.3 490.2 221.3 469.9 233.8 457.4L371.2 320L233.9 182.6C221.4 170.1 221.4 149.8 233.9 137.3C246.4 124.8 266.7 124.8 279.2 137.3L439.2 297.3z"/></svg>
+                </a>
+            </h2>
+            <div class="row g-3" id="apps-grid-social">
+                
+            </div>
+        </section>
+
+        <section class="app-section mb-4">
+            <h2 class="section-heading mb-3">
+                <a href="/apps/category.html?category=video-players-and-editors">
+                    Video Players & Editors Apps
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M439.1 297.4C451.6 309.9 451.6 330.2 439.1 342.7L279.1 502.7C266.6 515.2 246.3 515.2 233.8 502.7C221.3 490.2 221.3 469.9 233.8 457.4L371.2 320L233.9 182.6C221.4 170.1 221.4 149.8 233.9 137.3C246.4 124.8 266.7 124.8 279.2 137.3L439.2 297.3z"/></svg>
+                </a>
+            </h2>
+            <div class="row g-3" id="apps-grid-video-players-and-editors">
+                
+            </div>
+        </section>
+
+        <section class="category-section my-4">
+            <h2 class="section-heading mb-3">Category</h2>
+            <div class="category-chip-group">
+
+                <a href="/apps/category.html?category=auto-and-vehicles" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLmdvb2dsZS5hbmRyb2lkLnByb2plY3Rpb24uZ2VhcmhlYWRfaWNvbl8xNzkwNDk0ODg0XzAxNA/icon.webp?w=48&fakeurl=1&type=.webp" alt="Auto & Vehicles" class="chip-icon">
+                    <span>Auto & Vehicles</span>
+                </a>
+
+                <a href="/apps/category.html?category=business" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/bmV4dGFwcC5meF9pY29uXzE2NDY2MjQyODdfMDIy/icon.webp?w=48&fakeurl=1&type=.webp" alt="Business" class="chip-icon">
+                    <span>Business</span>
+                </a>
+
+                <a href="/apps/category.html?category=communication" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/b3JnLnRlbGVncmFtLm1lc3Nlbmdlcl9pY29uXzE3ODA5OTQ1NTlfMDM0/icon.webp?w=48&fakeurl=1&type=.webp" alt="Communication" class="chip-icon">
+                    <span>Communication</span>
+                </a>
+
+                <a href="/apps/category.html?category=dating" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLnRpbmRlcl9pY29uXzE3ODE1NjA5MzJfMDQx/icon.webp?w=48&fakeurl=1&type=.webp" alt="Dating" class="chip-icon">
+                    <span>Dating</span>
+                </a>
+
+                <a href="/apps/category.html?category=art-and-design" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLnZibGFzdC5mbGlwYWNsaXBfaWNvbl8xNzgwOTU3NjEzXzA4Mw/icon.webp?w=48&fakeurl=1&type=.webp" alt="Art & Design" class="chip-icon">
+                    <span>Art & Design</span>
+                </a>
+
+                <a href="/apps/category.html?category=entertainment" class="category-chip">
+                    <img src="https://image.winudf.com/v2/user/admin/YWRtaW5fYnVmZmJ1ZmYucG5nXzE3MjEyMDc0NjgyODM/icon.webp?w=48&fakeurl=1&type=.webp" alt="Entertainment" class="chip-icon">
+                    <span>Entertainment</span>
+                </a>
+
+                <a href="/apps/category.html?category=finance" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/aWQuZGFuYV9pY29uXzE3ODEwNTk4NDVfMDI0/icon.webp?w=48&fakeurl=1&type=.webp" alt="Finance" class="chip-icon">
+                    <span>Finance</span>
+                </a>
+
+                <a href="/apps/category.html?category=food-and-drink" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLmtvcGlrZW5hbmdhbl9pY29uXzE3ODEyNzQyNTlfMDYz/icon.webp?w=48&fakeurl=1&type=.webp" alt="Food & Drink" class="chip-icon">
+                    <span>Food & Drink</span>
+                </a>
+
+                <!-- <a href="/apps/category.html?category=medical" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/dHIuZ292LnNhZ2xpay5NSFJTTU9CSUxfaWNvbl8xNzgxNzAyODAxXzA0MA/icon.webp?w=48&fakeurl=1&type=.webp" alt="Medical" class="chip-icon">
+                    <span>Medical</span>
+                </a> -->
+
+                <a href="/apps/category.html?category=photography" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLmJsYWNrbWFnaWNkZXNpZ24uYW5kcm9pZC5ibGFja21hZ2ljY2FtX2ljb25fMTc4NDE4MDIxNF8wODg/icon.webp?w=48&fakeurl=1&type=.webp" alt="Photography" class="chip-icon">
+                    <span>Photography</span>
+                </a>
+
+                <a href="/apps/category.html?category=shopping" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLmF2aXRvLmFuZHJvaWRfaWNvbl8xNjc0MjE1ODczXzAzMw/icon.webp?w=48&fakeurl=1&type=.webp" alt="Shopping" class="chip-icon">
+                    <span>Shopping</span>
+                </a>
+                
+                <a href="/apps/category.html?category=social" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLnpoaWxpYW9hcHAubXVzaWNhbGx5X2ljb25fMTc4MDkyNDkzOF8wNjI/icon.webp?w=48&fakeurl=1&type=.webp" alt="Social" class="chip-icon">
+                    <span>Social</span>
+                </a>
+
+                <!-- <a href="/apps/category.html?category=travel-and-local" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLmdvb2dsZS5hbmRyb2lkLmFwcHMubWFwc19pY29uXzE3ODA5Mjc5MjVfMDM3/icon.webp?w=48&fakeurl=1&type=.webp" alt="Travel & Local" class="chip-icon">
+                    <span>Travel & Local</span>
+                </a> -->
+
+                <a href="/apps/category.html?category=video-players-and-editors" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLmxlbW9uLmx2b3ZlcnNlYXNfaWNvbl8xNzY4MzIwMDQyXzA2Ng/icon.webp?w=48&fakeurl=1&type=.webp" alt="Video Players & Editors" class="chip-icon">
+                    <span>Video Players & Editors</span>
+                </a>
+
+                <!-- <a href="/apps/category.html?category=weather" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/YW11c2V3b3Jrcy50aGVybW9tZXRlcl9pY29uXzE3NzAxNjUxNzZfMDAy/icon.webp?w=48&fakeurl=1&type=.webp" alt="Weather" class="chip-icon">
+                    <span>Weather</span>
+                </a> -->
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-apk">
+        <div class="container py-4">
+            <div class="row gy-4">
+                <!-- About Column -->
+                <div class="col-lg-4 col-md-4">
+                    <div class="footer-logo mb-3">
+                        <span class="logo-symbol"><i class="fa-solid fa-cloud-arrow-down"></i></span>APKCloud
+                    </div>
+                    <p class="footer-desc">
+                        Discover and download the best Android Apps and Games. Safe, fast, and free APK download service
+                        for mobile users worldwide.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-4 col-md-4 col-6">
+                    <h5 class="footer-title">Top Products</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">APK Signature Verification</a></li>
+                        <li><a href="#">APK Install</a></li>
+                        <li><a href="#">APK Download</a></li>
+                        <li><a href="#">APKCloud App</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company / Legal -->
+                <div class="col-lg-4 col-md-4 col-6">
+                    <h5 class="footer-title">Company & Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">DMCA Disclaimer</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-hr">
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center text-muted"
+                style="font-size: 12px;">
+                <p class="mb-2 mb-sm-0">Copyright © 2026 APKCloud. All rights reserved.</p>
+                <p class="mb-0">Designed for Android Users</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/skeletons.js"></script>
+    <script src="/js/apps.js"></script>
+    <script src="/js/search.js"></script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

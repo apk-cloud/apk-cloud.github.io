@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/fav-icon.svg">
+    <title>Games - APKCloud</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome 6 Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/content-body.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-apk sticky-top">
+        <div class="container">
+            <a class="navbar-brand logo-apk d-flex align-items-center" href="/index.html">
+                <span class="logo-symbol"><i class="fa-solid fa-cloud-arrow-down"></i></span>APKCloud
+            </a>
+
+            <!-- Mobile Hamburger Toggle Button -->
+            <button class="navbar-toggler border-0 p-1 shadow-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenuDrawer" aria-controls="mobileMenuDrawer">
+                <i class="fa-solid fa-bars-staggered fs-4 text-dark"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNavbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-apk active" href="/games.html">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-apk" href="/apps.html">Apps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-apk" href="https://asiafilm.org/4/1f06ef4f16448d7397534363224d9253">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-apk" href="https://asiafilm.org/4/1f06ef4f16448d7397534363224d9253">Products</a>
+                    </li>
+                </ul>
+
+                <div class="search-box-wrap">
+                    <input type="text" class="searchInput form-control" placeholder="Search APKCloud...">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <div class="suggestions-dropdown d-none"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Top Search Bar (Visible only on small screens) -->
+    <div class="container d-lg-none mt-2 mb-3">
+        <div class="search-box-wrap">
+            <input type="text" class="searchInput form-control" placeholder="Search Apps, Games...">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <div class="suggestions-dropdown d-none"></div>
+        </div>
+    </div>
+
+    <!-- Smart Mobile Offcanvas Drawer -->
+    <div class="offcanvas offcanvas-start offcanvas-apk" tabindex="-1" id="mobileMenuDrawer"
+        aria-labelledby="mobileMenuDrawerLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand logo-apk d-flex align-items-center" href="/index.html">
+                <span class="logo-symbol"><i class="fa-solid fa-cloud-arrow-down"></i></span>APKCloud
+            </a>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between py-3">
+            <ul class="navbar-nav gap-1">
+                <li class="nav-item">
+                    <a class="mobile-nav-link" href="/index.html">
+                        <i class="fa-solid fa-house"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="mobile-nav-link active" href="/games.html">
+                        <i class="fa-solid fa-gamepad"></i> Games
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="mobile-nav-link" href="/apps.html">
+                        <i class="fa-solid fa-shapes"></i> Apps
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="mobile-nav-link" href="https://asiafilm.org/4/1f06ef4f16448d7397534363224d9253">
+                        <i class="fa-regular fa-newspaper"></i> Articles
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="mobile-nav-link" href="https://asiafilm.org/4/1f06ef4f16448d7397534363224d9253">
+                        <i class="fa-solid fa-cube"></i> Products
+                    </a>
+                </li>
+            </ul>
+
+            <div class="p-3 bg-light rounded-3 text-center mt-4">
+                <div class="fw-bold mb-1" style="font-size: 13px;">APKCloud App</div>
+                <p class="text-muted mb-2" style="font-size: 11px;">Fast & safe download experience</p>
+                <a href="https://asiafilm.org/4/1f06ef4f16448d7397534363224d9253" class="btn btn-sm btn-success w-100 fw-semibold"
+                    style="background-color: #24c974; border: none;">Get App</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="container my-4">
+        <!-- Today's Latest Update Games Section -->
+        <section class="app-section mb-5">
+            <h2 class="section-heading mb-3">Latest Update Games</h2>
+            <div class="row g-3" id="latest-games-grid">
+                <!-- All Category 1 App Json Load -->
+            </div>
+        </section>
+
+        <section class="app-section mb-4">
+            <h2 class="section-heading mb-3">
+                <a href="/games/category.html?category=action">
+                    Action Games
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M439.1 297.4C451.6 309.9 451.6 330.2 439.1 342.7L279.1 502.7C266.6 515.2 246.3 515.2 233.8 502.7C221.3 490.2 221.3 469.9 233.8 457.4L371.2 320L233.9 182.6C221.4 170.1 221.4 149.8 233.9 137.3C246.4 124.8 266.7 124.8 279.2 137.3L439.2 297.3z"/></svg>
+                </a>
+            </h2>
+            <div class="row g-3" id="apps-grid-action">
+                <!-- Action Json Load -->
+            </div>
+        </section>
+
+        <section class="app-section mb-4">
+            <h2 class="section-heading mb-3">
+                <a href="/games/category.html?category=adventure">
+                    Adventure Games
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M439.1 297.4C451.6 309.9 451.6 330.2 439.1 342.7L279.1 502.7C266.6 515.2 246.3 515.2 233.8 502.7C221.3 490.2 221.3 469.9 233.8 457.4L371.2 320L233.9 182.6C221.4 170.1 221.4 149.8 233.9 137.3C246.4 124.8 266.7 124.8 279.2 137.3L439.2 297.3z"/></svg>
+                </a>
+            </h2>
+            <div class="row g-3" id="apps-grid-adventure">
+                <!-- Adventure Json Load -->
+            </div>
+        </section>
+
+        <section class="app-section mb-4">
+            <h2 class="section-heading mb-3">
+                <a href="/games/category.html?category=simulation">
+                    Simulation games
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M439.1 297.4C451.6 309.9 451.6 330.2 439.1 342.7L279.1 502.7C266.6 515.2 246.3 515.2 233.8 502.7C221.3 490.2 221.3 469.9 233.8 457.4L371.2 320L233.9 182.6C221.4 170.1 221.4 149.8 233.9 137.3C246.4 124.8 266.7 124.8 279.2 137.3L439.2 297.3z"/></svg>
+                </a>
+            </h2>
+            <div class="row g-3" id="apps-grid-simulation">
+                <!-- Simulation Json Load -->
+            </div>
+        </section>
+
+        <section class="category-section my-4">
+            <h2 class="section-heading mb-3">Category</h2>
+            <div class="category-chip-group">
+                <!-- Action -->
+                <a href="/games/category.html?category=action" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLmR0cy5mcmVlZmlyZXRoX2ljb25fMTc4OTUyOTU3NV8wOTQ/icon.webp?w=48&fakeurl=1&type=.webp" alt="Action" class="chip-icon">
+                    <span>Action</span>
+                </a>
+
+                <!-- Adventure -->
+                <a href="/games/category.html?category=adventure" class="category-chip">
+                    <img src="https://image.winudf.com/v2/user/admin/YWRtaW5fYXJ0d29ya3MtcGhucHBvd3hvcjc3OFkyTC1WNVZXNEEtdDUwMHg1MDAuanBnXzE3MjI0MTQyNTUxMjk/icon.webp?w=48&fakeurl=1&type=.webp" alt="Adventure" class="chip-icon">
+                    <span>Adventure</span>
+                </a>
+
+                <!-- Arcade -->
+                <!-- <a href="category.html?cat=arcade" class="category-chip">
+                    <span class="chip-icon-placeholder"></span>
+                    <span>Arcade</span>
+                </a> -->
+
+                <!-- Board -->
+                <a href="/games/category.html?category=board" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLnlhbGxhLnlhbGxhZ2FtZXNfaWNvbl8xNzgxNzkyNzE2XzA2Mg/icon.webp?w=48&fakeurl=1&type=.webp" alt="Board" class="chip-icon">
+                    <span>Board</span>
+                </a>
+
+                <!-- Card -->
+                <a href="/games/category.html?category=card" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/cER3LmRsTDNpLm9RREY3X2ljb25fMTYwMjQ2NTkzN18wNjI/icon.webp?w=48&fakeurl=1&type=.webp" alt="Card" class="chip-icon">
+                    <span>Card</span>
+                </a>
+
+                <!-- Casino -->
+                <!-- <a href="category.html?cat=casino" class="category-chip">
+                    <span class="chip-icon-placeholder"></span>
+                    <span>Casino</span>
+                </a> -->
+
+                <!-- Casual -->
+                <!-- <a href="category.html?cat=casual" class="category-chip">
+                    <img src="https://via.placeholder.com/32" alt="Casual" class="chip-icon">
+                    <span>Casual</span>
+                </a> -->
+
+                <!-- Educational -->
+                <a href="/games/category.html?category=educational" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLnRvY2Fib2NhLnRvY2FsaWZld29ybGRfaWNvbl8xNzkwOTIwODU1XzAxOQ/icon.webp?w=48&fakeurl=1&type=.webp" alt="Educational" class="chip-icon">
+                    <span>Educational</span>
+                </a>
+
+                <!-- Music -->
+                <!-- <a href="category.html?cat=music" class="category-chip">
+                    <img src="https://via.placeholder.com/32" alt="Music" class="chip-icon">
+                    <span>Music</span>
+                </a> -->
+
+                <!-- Puzzle -->
+                <!-- <a href="category.html?cat=puzzle" class="category-chip">
+                    <span class="chip-icon-placeholder"></span>
+                    <span>Puzzle</span>
+                </a> -->
+
+                <!-- Racing -->
+                <a href="/games/category.html?category=racing" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLm5ldGVhc2UuZGZqc3NlYV9pY29uXzE3ODk3MDI1NzNfMDY4/icon.webp?w=48&fakeurl=1&type=.webp" alt="Racing" class="chip-icon">
+                    <span>Racing</span>
+                </a>
+
+                <!-- Role Playing -->
+                <!-- <a href="category.html?cat=role-playing" class="category-chip">
+                    <span class="chip-icon-placeholder"></span>
+                    <span>Role Playing</span>
+                </a> -->
+
+                <!-- Simulation -->
+                <a href="/games/category.html?category=simulation" class="category-chip">
+                    <img src="https://image.winudf.com/v2/user/admin/YWRtaW5fSU1HXzIwMjYwMzEwNDM0NF8yMDB4MjAwLmpwZ18xNzczMTI4NjY3NzI3/icon.webp?w=48&fakeurl=1&type=.webp" alt="Simulation" class="chip-icon">
+                    <span>Simulation</span>
+                </a>
+
+                <!-- Sports -->
+                <a href="/games/category.html?category=sports" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/anAua29uYW1pLnBlc2FtX2ljb25fMTc4NzIwNjkwM18wMTk/icon.webp?w=48&fakeurl=1&type=.webp" alt="Sports" class="chip-icon">
+                    <span>Sports</span>
+                </a>
+
+                <!-- Strategy -->
+                <!-- <a href="category.html?cat=strategy" class="category-chip">
+                    <span class="chip-icon-placeholder"></span>
+                    <span>Strategy</span>
+                </a> -->
+
+                <!-- Trivia -->
+                <!-- <a href="category.html?cat=trivia" class="category-chip">
+                    <span class="chip-icon-placeholder"></span>
+                    <span>Trivia</span>
+                </a> -->
+
+                <!-- Word -->
+                <!-- <a href="category.html?cat=word" class="category-chip">
+                    <span class="chip-icon-placeholder"></span>
+                    <span>Word</span>
+                </a> -->
+
+                <!-- Family -->
+                <a href="/games/category.html?category=family" class="category-chip">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLkVkdWNhR2FtZXMuRGlub1RpbV9pY29uXzE3NjM1MTg1NjBfMDQz/icon.webp?w=48&fakeurl=1&type=.webp" alt="Family" class="chip-icon">
+                    <span>Family</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-apk">
+        <div class="container py-4">
+            <div class="row gy-4">
+                <!-- About Column -->
+                <div class="col-lg-4 col-md-4">
+                    <div class="footer-logo mb-3">
+                        <span class="logo-symbol"><i class="fa-solid fa-cloud-arrow-down"></i></span>APKCloud
+                    </div>
+                    <p class="footer-desc">
+                        Discover and download the best Android Apps and Games. Safe, fast, and free APK download service
+                        for mobile users worldwide.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-4 col-md-4 col-6">
+                    <h5 class="footer-title">Top Products</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">APK Signature Verification</a></li>
+                        <li><a href="#">APK Install</a></li>
+                        <li><a href="#">APK Download</a></li>
+                        <li><a href="#">APKCloud App</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company / Legal -->
+                <div class="col-lg-4 col-md-4 col-6">
+                    <h5 class="footer-title">Company & Legal</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">DMCA Disclaimer</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-hr">
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center text-muted"
+                style="font-size: 12px;">
+                <p class="mb-2 mb-sm-0">Copyright © 2026 APKCloud. All rights reserved.</p>
+                <p class="mb-0">Designed for Android Users</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/skeletons.js"></script>
+    <script src="/js/games.js"></script>
+    <script src="/js/search.js"></script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

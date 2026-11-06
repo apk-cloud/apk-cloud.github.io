@@ -1,4 +1,4 @@
-window.renderCardSkeletons = function (container, count = 6) {
+window.renderCardSkeletons = function (container, count = 9) {
     if (!container) return;
 
     container.innerHTML = Array.from({ length: count }, () => `

@@ -77,7 +77,9 @@ Promise.all(jsonFiles.map(file => fetch(file).then(res => {
                             Request APK on Telegram <i class="fa-paper-plane fa-solid text-info"></i>
                         </a>
                         <div class="text-center text-md-end">
-                            <a href="#" class="install-link">How to install XAPK / APK file <i class="fa-solid fa-arrow-up-right-from-square ms-1" style="font-size: 10px;"></i></a>
+                            <a href="https://asiafilm.org/4/1f06ef4f16448d7397534363224d9253" class="install-link">How to install XAPK / APK file
+                                <i class="fa-solid fa-arrow-up-right-from-square ms-1" style="font-size: 10px;"></i>
+                            </a>
                         </div>
                     </div>
                 </div>

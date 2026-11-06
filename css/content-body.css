@@ -1,0 +1,275 @@
+/* App Section Heading */
+.section-heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111111;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d0d2d4;
+}
+
+.section-heading a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.section-heading a svg{
+    width: 16px;
+}
+
+.section-title-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-title-link:hover .section-heading {
+    color: #24c974;
+}
+
+/* App List Card Item */
+.app-card {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 12px;
+    text-decoration: none;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+.card-skeleton {
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    padding: 8px;
+}
+
+.skeleton-block {
+    background: linear-gradient(90deg, #f0f2f4 25%, #e5e8eb 50%, #f0f2f4 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+.skeleton-app-icon {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    margin-right: 12px;
+    border-radius: 14px;
+}
+
+.skeleton-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.skeleton-line {
+    height: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+.skeleton-line-title {
+    width: 62%;
+    height: 13px;
+}
+
+.skeleton-line-subtitle {
+    width: 78%;
+}
+
+.skeleton-line-rating {
+    width: 28%;
+    margin-bottom: 0;
+}
+
+.skeleton-download {
+    display: none;
+    width: 72px;
+    height: 30px;
+    flex-shrink: 0;
+    margin-left: 8px;
+    border-radius: 6px;
+}
+
+@keyframes skeleton-shimmer {
+    to {
+        background-position: -200% 0;
+    }
+}
+
+.app-card:hover {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.app-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-right: 12px;
+    border: 1px solid #eaedf1;
+}
+
+.app-info {
+    flex-grow: 1;
+    min-width: 0; /* Ensures text truncation works */
+}
+
+.app-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.app-card:hover .app-name {
+    color: #24c974;
+}
+
+.app-subtext {
+    font-size: 13px;
+    color: #888888;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.app-meta {
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 0;
+}
+
+.app-rating {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ff9800;
+    margin-bottom: 0;
+}
+
+.app-rating i {
+    font-size: 11px;
+}
+
+/* Mobile Specific Download Button (As seen in image 2) */
+.btn-download-mobile {
+    background-color: #24c974;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 991px) {
+    .app-card {
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+        border-radius: 0;
+    }
+
+    .card-skeleton {
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .skeleton-download {
+        display: block;
+    }
+
+    .app-card:hover {
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .section-heading {
+        font-size: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skeleton-block {
+        animation: none;
+    }
+}
+
+
+
+
+/* Category Section Wrapper */
+.category-chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+    align-items: center;
+}
+
+/* Individual Category Chip Pill */
+.category-chip {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 50px;
+    padding: 4px 16px 4px 5px;
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.category-chip:hover {
+    border-color: #24c974;
+    color: #24c974;
+    box-shadow: 0 2px 8px rgba(36, 201, 116, 0.12);
+}
+
+/* Category Circle Image Icon */
+.chip-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+/* Placeholder Gray Circle (jeigular image pixel missing ache) */
+.chip-icon-placeholder {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+    margin-right: 8px;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 576px) {
+    .category-chip-group {
+        gap: 8px;
+    }
+    
+    .category-chip {
+        font-size: 13px;
+        padding: 3px 12px 3px 4px;
+    }
+
+    .chip-icon,
+    .chip-icon-placeholder {
+        width: 26px;
+        height: 26px;
+    }
+}

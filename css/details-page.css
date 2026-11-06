@@ -1,0 +1,272 @@
+        /* Main Container Cards */
+        .card-main {
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid var(--apk-border);
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        /* App Icon & Header */
+        .app-icon-img {
+            width: 88px;
+            height: 88px;
+            border-radius: 18px;
+            object-fit: cover;
+            border: 1px solid var(--apk-border);
+        }
+
+        .app-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 2px;
+            color: var(--apk-text-dark);
+        }
+
+        .app-developer {
+            color: var(--apk-text-muted);
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .app-version {
+            color: #888;
+            font-size: 13px;
+        }
+
+        /* Buttons */
+        .btn-apk-primary {
+            background-color: var(--apk-green);
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 6px;
+            padding: 10px 24px;
+            font-size: 15px;
+            border: none;
+            width: 40%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+
+        .btn-apk-primary:hover {
+            background-color: var(--apk-green-hover);
+            color: #fff;
+        }
+
+        .btn-telegram {
+            background-color: #ffffff;
+            color: #0088cc;
+            border: 1px solid #d0e7f7;
+            font-weight: 500;
+            border-radius: 6px;
+            padding: 8px 18px;
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-telegram:hover {
+            background-color: #f0f8ff;
+            color: #0088cc;
+        }
+
+        .install-link {
+            color: #2196f3;
+            font-size: 12px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 6px;
+        }
+
+        .install-link:hover {
+            text-decoration: underline;
+        }
+
+        /* App Stats Bar */
+        .stats-divider {
+            border-top: 1px solid var(--apk-border);
+            margin: 20px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            border-right: 1px solid var(--apk-border);
+        }
+
+        .stat-item:last-child {
+            border-right: none;
+        }
+
+        .stat-value {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--apk-text-dark);
+            margin-bottom: 2px;
+        }
+
+        .stat-value .e-image{
+            width: 50px;
+            height: 15px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* Ad Box */
+        .ad-container {
+            background-color: #fafafa;
+            border: 1px dashed #d9d9d9;
+            border-radius: 6px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaaaaa;
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        /* Content Sections */
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--apk-text-dark);
+        }
+
+        .about-text {
+            line-height: 1.6;
+            color: #444;
+            font-size: 13.5px;
+        }
+
+        /* Info Grid Table */
+        .info-table {
+            border: 1px solid var(--apk-border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .info-row {
+            display: flex;
+            border-bottom: 1px solid var(--apk-border);
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-cell {
+            flex: 1;
+            padding: 12px 16px;
+            border-right: 1px solid var(--apk-border);
+            background-color: #fff;
+        }
+
+        .info-cell:last-child {
+            border-right: none;
+        }
+
+        .info-label {
+            color: #888;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .info-val {
+            font-weight: 600;
+            color: #333;
+            font-size: 13px;
+            word-wrap: anywhere;
+        }
+
+        .info-link {
+            color: #2196f3;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .info-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Sidebar Trending Apps */
+        .trending-card {
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid var(--apk-border);
+            padding: 16px;
+        }
+
+        .trending-header {
+            font-size: 16px;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .trending-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .trending-item:hover .trending-title {
+            color: var(--apk-green);
+        }
+
+        .trending-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 12px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .trending-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 2px;
+            line-height: 1.2;
+        }
+
+        .trending-rating {
+            font-size: 11px;
+            color: #ff9800;
+            font-weight: 600;
+        }
+
+
+    @media (max-width: 767px){
+        
+        .btn-apk-primary{
+            width: unset;
+        }
+
+    }
+
+    @media (max-width: 320px){
+
+        .app-title {
+            font-size: 16px;
+        }
+
+    }

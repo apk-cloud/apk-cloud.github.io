@@ -1,0 +1,263 @@
+        :root {
+            --apk-green: #24c974;
+            --apk-green-hover: #1eb666;
+            --apk-light-bg: #f4f6f8;
+            --apk-border: #eaedf1;
+            --apk-text-muted: #666666;
+            --apk-text-dark: #111111;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            /* background-color: var(--apk-light-bg); */
+            color: var(--apk-text-dark);
+            font-size: 14px;
+        }
+
+        /* Navbar Styling */
+        .navbar-apk {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--apk-border);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .navbar-brand .logo-apk {
+            font-weight: 800;
+            font-size: 20px;
+            color: var(--apk-text-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-symbol {
+            color: var(--apk-green);
+            font-size: 24px;
+            margin-right: 6px;
+        }
+
+        .nav-link-apk {
+            color: #333;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 0 12px !important;
+            text-decoration: none;
+        }
+
+        .nav-link-apk.active{
+            color: #24c974 !important;
+        }
+
+        .nav-link-apk:hover {
+            color: var(--apk-green);
+        }
+
+.search-box-wrap {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-box-wrap input {
+            background-color: #f6f8fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 20px;
+            padding: 8px 38px 8px 16px;
+            transition: all 0.2s ease;
+            font-size: 14px;
+            width: 100%;
+            outline: none;
+        }
+
+        .search-box-wrap .search-icon {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888888;
+            pointer-events: none;
+        }
+
+        .search-box-wrap input:focus {
+            background-color: #ffffff;
+            border-color: #24c974;
+            box-shadow: 0 0 0 3px rgba(36, 201, 116, 0.15);
+        }
+
+        .suggestions-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 1050;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .suggestion-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            border-bottom: 1px solid #f1f1f1;
+            transition: background 0.2s ease;
+            cursor: pointer;
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .suggestion-item:hover {
+            background-color: #f8f9fa;
+            color: #24c974;
+        }
+
+        .suggestion-item img {
+            width: 28px;
+            height: 28px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        /* Mobile Offcanvas Drawer Styling */
+        .offcanvas-apk {
+            width: 280px !important;
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+
+        .offcanvas-header {
+            border-bottom: 1px solid #f1f3f5;
+            padding: 16px 20px;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            color: #333333;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            background-color: #eafaf1;
+            color: #24c974;
+        }
+
+        .mobile-nav-link i {
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+            color: #666666;
+        }
+
+        .mobile-nav-link:hover i,
+        .mobile-nav-link.active i {
+            color: #24c974;
+        }
+
+        /* Desktop specific layout */
+        @media (min-width: 992px) {
+            .search-box-wrap {
+                max-width: 240px;
+            }
+
+            .nav-link-apk {
+                font-weight: 600;
+                color: #333333;
+                padding: 0 14px !important;
+                text-decoration: none;
+            }
+
+            .nav-link-apk:hover {
+                color: #24c974;
+            }
+        }
+
+        /* Footer Styling */
+        .footer-apk {
+            background-color: #ffffff;
+            border-top: 1px solid var(--apk-border);
+            color: #555555;
+            font-size: 13px;
+        }
+
+        .footer-logo {
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--apk-text-dark);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-desc {
+            color: #666666;
+            line-height: 1.6;
+            font-size: 13px;
+        }
+
+        .footer-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--apk-text-dark);
+            margin-bottom: 14px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #666666;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--apk-green);
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background-color: #f0f2f5;
+            color: #555;
+            border-radius: 50%;
+            margin-right: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--apk-green);
+            color: #ffffff;
+        }
+
+        .footer-hr {
+            border-color: var(--apk-border);
+            margin: 20px 0;
+            opacity: 0.8;
+        }
